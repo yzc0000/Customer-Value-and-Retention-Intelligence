@@ -1,0 +1,47 @@
+{
+  "description": "Source file fingerprints for public project code inspected during the design review.",
+  "sources": [
+    {
+      "url": "https://github.com/Kingsley-amg/customer-ltv-prediction/blob/main/02_model_ltv.py",
+      "blob_sha": "22c77d1e3ae97ba1fd71bd310f5996359cbd66ac",
+      "review_date": "2026-10-01",
+      "reviewed": "Original source content read; not executed"
+    },
+    {
+      "url": "https://github.com/Hamim-Susmit/customer-churn-clv-online-retail-ii/blob/main/scripts/run_04.py",
+      "blob_sha": "e21638a9344d631c5c5e5b8c85bf1ecb49887db2",
+      "review_date": "2026-10-01",
+      "reviewed": "Original source content read; not executed"
+    },
+    {
+      "url": "https://github.com/michaelf108/online-retail-clv/blob/main/README.md",
+      "blob_sha": "7682fddd9b617f37ebbb2a300c57c7a8b9ab5c15",
+      "review_date": "2026-10-01",
+      "reviewed": "Original source content read; not executed"
+    },
+    {
+      "url": "https://github.com/michaelf108/online-retail-clv/blob/main/models/marts/mart_holdout_validation.py",
+      "blob_sha": "4006c9028af61df6121197005a6db64ca3980660",
+      "review_date": "2026-10-01",
+      "reviewed": "Original source content read; not executed"
+    },
+    {
+      "url": "https://github.com/michaelf108/online-retail-clv/blob/main/models/marts/customer_segments.py",
+      "blob_sha": "5b265a1bccb410e6361e556a855bee4b732a1f9f",
+      "review_date": "2026-10-01",
+      "reviewed": "Original source content read; not executed"
+    },
+    {
+      "url": "https://github.com/Hamim-Susmit/customer-churn-clv-online-retail-ii/blob/main/src/features.py",
+      "blob_sha": "41a44b5e5877db3dd73d4e713054b32520444d8a",
+      "review_date": "2026-10-01",
+      "reviewed": "Original source content read; not executed"
+    },
+    {
+      "url": "https://github.com/marinang/online_retail_analysis/blob/main/analysis.ipynb",
+      "blob_sha": "489436a212f5b82af7893016a45c7ec8272bc059",
+      "review_date": "2026-10-01",
+      "reviewed": "Original source content read; not executed"
+    }
+  ]
+}

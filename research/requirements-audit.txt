@@ -1,0 +1,5 @@
+# Versions used for the completed workbook audit on Python 3.14.0.
+# Proposed model/UI dependencies have not been installed or locked.
+pandas==2.3.3
+numpy==2.3.5
+openpyxl==3.1.5

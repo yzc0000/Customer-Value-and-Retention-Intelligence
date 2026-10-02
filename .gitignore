@@ -1,0 +1,16 @@
+# Source workbook and future derived customer/model artifacts
+online_retail_II.xlsx
+Project 2 brief.docx
+data/raw/
+data/interim/
+data/processed/
+artifacts/
+.venv/
+.local-deps/
+__pycache__/
+*.pyc
+# Local browser inspection scratch files
+research/evidence/.preview-browser*/
+research/evidence/.preview-retention/
+research/evidence/headless_preview.log
+reports/*.png

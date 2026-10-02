@@ -1,0 +1,5 @@
+policy,ranking,customers,mean_inactivity_probability,median_historical_order_value_gbp,predicted_revenue_90d_gbp
+risk_value,Risk × historical average order value,523,0.7961255343087678,748.2333333333332,151859.56890296936
+risk,Inactivity risk only,523,0.9633296528015232,176.1,14049.589674472809
+forecast_value,Expected 90-day revenue only,523,0.1627507836414262,504.36393939393946,1298952.7415771484
+historical_value,Historical 365-day spend only,523,0.18946822275672076,525.8772727272727,1276898.273590088

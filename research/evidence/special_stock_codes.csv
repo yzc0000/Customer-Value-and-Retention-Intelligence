@@ -1,0 +1,26 @@
+stock_code,rows,description_example
+POST,2122,POSTAGE
+DOT,1446,DOTCOM POSTAGE
+M,1421,Manual
+C2,282,CARRIAGE
+D,177,Discount
+S,104,SAMPLES
+BANK CHARGES,102, Bank Charges
+ADJUST,67,Adjustment by john on 26/01/2010 16
+AMAZONFEE,43,AMAZON FEE
+DCGS0058,31,MISO PRETTY  GUM
+gift_0001_20,29,Dotcomgiftshop Gift Voucher £20.00
+gift_0001_30,29,Dotcomgiftshop Gift Voucher £30.00
+DCGSSGIRL,25,update
+DCGSSBOY,23,update
+PADS,19,PADS TO MATCH ALL CUSHIONS
+CRUK,16,CRUK Commission
+gift_0001_10,16,Dotcomgiftshop Gift Voucher £10.00
+DCGS0076,15,SUNJAR LED NIGHT NIGHT LIGHT
+TEST001,15,This is a test product.
+DCGS0003,14,BOXED GLASS ASHTRAY
+gift_0001_50,8,Dotcomgiftshop Gift Voucher £50.00
+gift_0001_40,7,Dotcomgiftshop Gift Voucher £40.00
+B,6,Adjust bad debt
+DCGS0069,6,OOH LA LA DOGS COLLAR
+m,5,Manual

@@ -1,0 +1,22 @@
+{
+  "forecast_cutoffs": ["2010-06-01", "2010-09-01", "2010-12-01", "2011-03-01", "2011-06-01", "2011-09-01"],
+  "primary_horizon_days": 90,
+  "feature_population": "Customers with at least one identified qualifying purchase before cutoff",
+  "development": {
+    "training_cutoffs": ["2010-06-01", "2010-09-01", "2010-12-01"],
+    "model_selection_cutoff": "2011-03-01",
+    "probability_calibration_cutoff": "2011-06-01",
+    "final_test_cutoff": "2011-09-01"
+  },
+  "six_calendar_month_revenue": {
+    "training_cutoff": "2010-06-01",
+    "model_selection_cutoff": "2010-12-01",
+    "final_test_cutoff": "2011-06-01"
+  },
+  "ninety_day_revenue": {
+    "development_origins": ["2011-03-01", "2011-06-01"],
+    "model_selection_metric": "Mean MAE across origins; mean absolute origin bias breaks ties",
+    "final_test_cutoff": "2011-09-01",
+    "refit_policy": "All earlier customer snapshots with matured 90-day labels"
+  }
+}

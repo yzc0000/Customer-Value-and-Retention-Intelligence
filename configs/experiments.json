@@ -1,0 +1,12 @@
+{
+  "forecast_cutoffs": ["2010-06-01", "2010-09-01", "2010-12-01", "2011-03-01", "2011-06-01", "2011-09-01"],
+  "classification_train_cutoffs": ["2010-06-01", "2010-09-01", "2010-12-01"],
+  "development_cutoff": "2011-03-01",
+  "calibration_cutoff": "2011-06-01",
+  "final_test_cutoff": "2011-09-01",
+  "horizon_days": 90,
+  "contact_capacity_fraction": 0.1,
+  "seed": 20261001,
+  "event_window_convention": "[cutoff, cutoff + horizon)",
+  "end_of_observation_exclusive": "2011-12-09"
+}

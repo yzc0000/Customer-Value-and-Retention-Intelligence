@@ -1,0 +1,4 @@
+model,mean_mae_improvement_gbp,customer_bootstrap_lower_95_gbp,customer_bootstrap_upper_95_gbp,note
+quarterly__enriched__hurdle_hist,15.199509931111404,7.251831172995134,21.838356242353964,Conditional on these two origins; does not measure uncertainty across future seasonal regimes or correct for candidate selection.
+monthly__enriched__hurdle_hist,1.1134284289574472,-6.736125080911666,8.665507364334658,Conditional on these two origins; does not measure uncertainty across future seasonal regimes or correct for candidate selection.
+ensemble__monthly_hurdle_plus_xgboost,3.654939226093945,-0.1354320120518448,7.325337131882313,Conditional on these two origins; does not measure uncertainty across future seasonal regimes or correct for candidate selection.

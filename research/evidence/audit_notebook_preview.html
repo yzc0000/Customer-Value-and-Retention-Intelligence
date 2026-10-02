@@ -1,0 +1,122 @@
+<!doctype html><meta charset='utf-8'><title>Workbook audit companion</title>
+<style>body{max-width:1100px;margin:40px auto;padding:0 24px;font:16px/1.5 system-ui;color:#17212b}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 Consolas,monospace}section{padding:14px 0;border-bottom:1px solid #ddd}.code{background:#f5f7fa;padding:16px}</style>
+<section><pre># Supplied workbook: reproducible scope audit
+
+## tl;dr
+
+The workbook has 1,067,371 invoice lines across two overlapping worksheets. 22.77% lack customer IDs. The conservative purchase scenario contains 5,852 customers and 4,179 repeat purchase-day customers. It supports the planned project after careful cleaning and temporal validation.
+
+This is a data-quality companion, not a predictive-model experiment.</pre></section>
+<section><pre>## Context &amp; Methods
+
+The controlling input is online_retail_II.xlsx, with every worksheet read. The exact profiling implementation is scripts/audit_dataset.py.
+
+### Key Assumptions
+
+- Dates remain in their source-local, timezone-naive form.
+- Forecast intervals are end-exclusive and must be completely observed.
+- Global exact deduplication and a numeric stock-code pattern define a conservative sensitivity scenario, not final cleaning.
+- No upstream event log proves recording completeness.
+
+All code cells were executed sequentially as plain Python by scripts/build_audit_notebook.py. A Jupyter kernel is not used by this generator; the cells are ordinary Python and can also run in Jupyter.</pre></section>
+<details><summary>Python cell 1</summary><pre class='code'>from pathlib import Path
+import json
+import runpy
+import pandas as pd
+
+root = Path.cwd().resolve()
+if not (root / &#x27;scripts&#x27; / &#x27;audit_dataset.py&#x27;).exists():
+    root = root.parent
+assert (root / &#x27;online_retail_II.xlsx&#x27;).exists(), &#x27;Run from the project root or notebooks folder.&#x27;
+print(&#x27;Input: online_retail_II.xlsx; all worksheets; unchanged source file.&#x27;)</pre></details>
+<section><pre>Input: online_retail_II.xlsx; all worksheets; unchanged source file.
+</pre></section>
+<section><pre>## Data
+
+### 1. Recompute the full workbook audit
+
+This cell reads the workbook and regenerates the aggregate evidence. No model is fitted. The script performs null, duplicate, key consistency, sign, code, temporal and forecast-maturity checks.</pre></section>
+<details><summary>Python cell 2</summary><pre class='code'>audit_module = runpy.run_path(str(root / &#x27;scripts&#x27; / &#x27;audit_dataset.py&#x27;))
+profile = audit_module[&#x27;audit&#x27;]()
+assert sum(sheet[&#x27;rows&#x27;] for sheet in profile[&#x27;sheets&#x27;]) == profile[&#x27;raw_rows&#x27;]
+print(&#x27;Sheet row counts reconcile with the full raw population.&#x27;)</pre></details>
+<section><pre>Loading every worksheet in the supplied workbook...
+Loaded Year 2009-2010: 525,461 invoice lines
+Loaded Year 2010-2011: 541,910 invoice lines
+{
+  &quot;raw_rows&quot;: 1067371,
+  &quot;date_min&quot;: &quot;2009-12-01 07:45:00&quot;,
+  &quot;date_max&quot;: &quot;2011-12-09 12:50:00&quot;,
+  &quot;distinct_known_customers&quot;: 5942,
+  &quot;exact_duplicate_excess_rows&quot;: 34335
+}
+Aggregate evidence saved under research/evidence
+Sheet row counts reconcile with the full raw population.
+</pre></section>
+<section><pre>## Results
+
+### 2. Review worksheet coverage and quality issues</pre></section>
+<details><summary>Python cell 3</summary><pre class='code'>print(pd.DataFrame(profile[&#x27;sheets&#x27;])[[&#x27;sheet&#x27;, &#x27;rows&#x27;, &#x27;date_min&#x27;, &#x27;date_max&#x27;, &#x27;missing_customer_rows&#x27;]].to_string(index=False))
+checks = {
+    &#x27;Raw invoice lines&#x27;: profile[&#x27;raw_rows&#x27;],
+    &#x27;Missing customer lines&#x27;: profile[&#x27;nulls&#x27;][&#x27;customer_id&#x27;][&#x27;rows&#x27;],
+    &#x27;Missing customer share (%)&#x27;: round(profile[&#x27;nulls&#x27;][&#x27;customer_id&#x27;][&#x27;pct&#x27;], 2),
+    &#x27;Exact duplicate excess lines&#x27;: profile[&#x27;exact_duplicate_excess_rows&#x27;],
+    &#x27;Cross-sheet repeated record hashes&#x27;: profile[&#x27;cross_sheet_duplicate_hashes&#x27;],
+    &#x27;Negative quantity lines&#x27;: profile[&#x27;negative_quantity_rows&#x27;],
+    &#x27;Nonpositive price lines&#x27;: profile[&#x27;nonpositive_price_rows&#x27;],
+}
+print(pd.Series(checks, name=&#x27;Measured value&#x27;).to_string())</pre></details>
+<section><pre>         sheet   rows            date_min            date_max  missing_customer_rows
+Year 2009-2010 525461 2009-12-01 07:45:00 2010-12-09 20:01:00                 107927
+Year 2010-2011 541910 2010-12-01 08:26:00 2011-12-09 12:50:00                 135080
+Raw invoice lines                     1067371.00
+Missing customer lines                 243007.00
+Missing customer share (%)                 22.77
+Exact duplicate excess lines            34335.00
+Cross-sheet repeated record hashes      22202.00
+Negative quantity lines                 22950.00
+Nonpositive price lines                  6207.00
+</pre></section>
+<section><pre>The sheets overlap in early December 2010. Missing IDs affect customer-level coverage. Credits and special codes require separate policies; the table does not classify every such event as an error.</pre></section>
+<section><pre>### 3. Check the conservative purchase sample</pre></section>
+<details><summary>Python cell 4</summary><pre class='code'>scenario = profile[&#x27;provisional_purchase_scenario&#x27;]
+keys = [&#x27;candidate_product_rows&#x27;, &#x27;orders&#x27;, &#x27;customers&#x27;, &#x27;one_order_customers&#x27;, &#x27;repeat_order_customers&#x27;, &#x27;one_purchase_day_customers&#x27;, &#x27;repeat_purchase_day_customers&#x27;]
+print(pd.Series({key: scenario[key] for key in keys}).to_string())
+assert scenario[&#x27;one_order_customers&#x27;] + scenario[&#x27;repeat_order_customers&#x27;] == scenario[&#x27;customers&#x27;]
+assert scenario[&#x27;one_purchase_day_customers&#x27;] + scenario[&#x27;repeat_purchase_day_customers&#x27;] == scenario[&#x27;customers&#x27;]</pre></details>
+<section><pre>candidate_product_rows           776577
+orders                            36594
+customers                          5852
+one_order_customers                1618
+repeat_order_customers             4234
+one_purchase_day_customers         1673
+repeat_purchase_day_customers      4179
+</pre></section>
+<section><pre>These counts describe the audit sensitivity scenario. Final source reconciliation and product classification can change them. Repeat purchase-day customers, rather than repeat invoice customers, determine daily Gamma-Gamma fitting eligibility.</pre></section>
+<section><pre>### 4. Check complete forecast horizons</pre></section>
+<details><summary>Python cell 5</summary><pre class='code'>snapshots = pd.DataFrame(profile[&#x27;snapshots&#x27;])
+columns = [&#x27;cutoff&#x27;, &#x27;horizon_days&#x27;, &#x27;label_end_exclusive&#x27;, &#x27;fully_observed&#x27;, &#x27;historical_customers&#x27;, &#x27;inactivity_pct_all_history&#x27;]
+print(snapshots[columns].round({&#x27;inactivity_pct_all_history&#x27;: 2}).to_string(index=False))
+assert snapshots.loc[~snapshots[&#x27;fully_observed&#x27;], &#x27;inactivity_pct_all_history&#x27;].isna().all()
+assert snapshots.loc[snapshots[&#x27;fully_observed&#x27;], &#x27;inactivity_pct_all_history&#x27;].between(0, 100).all()
+print(&#x27;Incomplete labels stay missing; observed inactivity percentages have valid bounds.&#x27;)</pre></details>
+<section><pre>    cutoff  horizon_days label_end_exclusive  fully_observed  historical_customers  inactivity_pct_all_history
+2010-06-01            90          2010-08-30            True                  2684                       50.30
+2010-06-01           180          2010-11-28            True                  2684                       28.69
+2010-09-01            90          2010-11-30            True                  3299                       41.68
+2010-09-01           180          2011-02-28            True                  3299                       35.34
+2010-12-01            90          2011-03-01            True                  4239                       66.81
+2010-12-01           180          2011-05-30            True                  4239                       51.88
+2011-03-01            90          2011-05-30            True                  4512                       64.87
+2011-03-01           180          2011-08-28            True                  4512                       53.66
+2011-06-01            90          2011-08-30            True                  4908                       67.05
+2011-06-01           180          2011-11-28            True                  4908                       48.53
+2011-09-01            90          2011-11-30            True                  5224                       57.20
+2011-09-01           180          2012-02-28           False                  5224                         NaN
+Incomplete labels stay missing; observed inactivity percentages have valid bounds.
+</pre></section>
+<section><pre>The 90-day final test can begin in September 2011. The six-calendar-month final test can begin in June 2011 and end before December 2011; the 180-day diagnostic has slightly different boundaries. Final-period outcome availability does not prove predictive accuracy, and outcome rates mix cohort composition with seasonality.</pre></section>
+<section><pre>## Takeaways
+
+The workbook supports the planned historical customer intelligence project. Reconcile the worksheet overlap, preserve signed credits and anonymous sales, and enforce cutoff/target boundaries before fitting models. Treat forecast revenue, permanent churn and intervention profit as distinct quantities. See research/DATASET_ASSESSMENT.md and research/PROJECT_DESIGN.md for interpretation and the proposed architecture.</pre></section>

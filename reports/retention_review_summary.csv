@@ -1,0 +1,8 @@
+segment_label,review_group,customers,queue_customers,mean_inactivity_probability,predicted_revenue_90d_gbp,median_historical_order_value_gbp
+Segment 0: repeat purchase history,"Higher value, higher risk",379,201,0.7054053676048256,139896.60446548462,598.0
+Segment 0: repeat purchase history,"Higher value, lower risk",435,19,0.23539892370298357,1058639.0803527832,595.8061538461538
+Segment 0: repeat purchase history,"Lower value, higher risk",737,0,0.6948847527106033,122822.8678855896,269.47875
+Segment 0: repeat purchase history,"Lower value, lower risk",755,0,0.24880960319207748,473461.54888153076,277.055
+Segment 1: sparse purchase history,"Higher value, higher risk",454,303,0.8457825214207756,60250.249071121216,560.935
+Segment 1: sparse purchase history,"Lower value, higher risk",2454,0,0.8730989551160473,155033.4526977539,194.7525
+Segment 1: sparse purchase history,"Lower value, lower risk",10,0,0.3876895930782378,1320.5333786010742,109.05333333333331

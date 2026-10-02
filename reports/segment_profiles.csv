@@ -1,0 +1,3 @@
+segment,customers,recency_days_median,purchase_day_count_median,purchase_count_median,lifetime_revenue_gbp_median,avg_order_value_gbp_median,avg_basket_units_median,product_diversity_median,mean_days_between_purchase_days_median,spend_90d_gbp_median,spend_365d_gbp_median,customer_share
+0,2166,46.61527777777778,6.0,6.0,2165.33,345.5891666666667,200.57777777777778,91.0,60.225,314.015,1551.4850000000001,0.441320293398533
+1,2742,219.0013888888889,1.0,1.0,342.305,220.45,118.0,21.0,101.0,0.0,235.945,0.558679706601467

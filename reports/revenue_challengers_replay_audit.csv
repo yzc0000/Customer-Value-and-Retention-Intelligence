@@ -1,0 +1,133 @@
+horizon,model,origin,customers,max_absolute_replay_difference_gbp,supervised_training_rows,fit_source
+90d,recent_spend,2010-09-01,3299,0.0,0,baseline formula
+90d,xgboost_tweedie,2010-09-01,3299,0.0,2684,mature supervised snapshots
+90d,xgboost_enriched_monthly,2010-09-01,3299,0.0,2684,mature supervised snapshots
+90d,hurdle_gamma_hist,2010-09-01,3299,0.0,2684,mature supervised snapshots
+90d,tweedie_gam,2010-09-01,3299,0.0,2684,mature supervised snapshots
+90d,hurdle_gamma_gam,2010-09-01,3299,0.0,2684,mature supervised snapshots
+90d,hurdle_ngboost_lognormal,2010-09-01,3299,0.0,2684,mature supervised snapshots
+90d,lstm_hurdle_lognormal,2010-09-01,3299,0.0,2684,mature supervised snapshots
+90d,bg_nbd_gamma_gamma,2010-09-01,3299,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_gamma_gamma,2010-09-01,3299,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_seasonal_gamma_gamma,2010-09-01,3299,0.0,0,as-of customer transaction histories
+90d,recent_spend,2010-12-01,4239,0.0,0,baseline formula
+90d,xgboost_tweedie,2010-12-01,4239,0.0,5983,mature supervised snapshots
+90d,xgboost_enriched_monthly,2010-12-01,4239,0.0,12070,mature supervised snapshots
+90d,hurdle_gamma_hist,2010-12-01,4239,0.0,12070,mature supervised snapshots
+90d,tweedie_gam,2010-12-01,4239,0.0,12070,mature supervised snapshots
+90d,hurdle_gamma_gam,2010-12-01,4239,0.0,12070,mature supervised snapshots
+90d,hurdle_ngboost_lognormal,2010-12-01,4239,0.0,12070,mature supervised snapshots
+90d,lstm_hurdle_lognormal,2010-12-01,4239,0.0,12070,mature supervised snapshots
+90d,bg_nbd_gamma_gamma,2010-12-01,4239,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_gamma_gamma,2010-12-01,4239,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_seasonal_gamma_gamma,2010-12-01,4239,0.0,0,as-of customer transaction histories
+90d,recent_spend,2011-03-01,4512,0.0,0,baseline formula
+90d,xgboost_tweedie,2011-03-01,4512,0.0,10222,mature supervised snapshots
+90d,xgboost_enriched_monthly,2011-03-01,4512,0.0,23760,mature supervised snapshots
+90d,hurdle_gamma_hist,2011-03-01,4512,0.0,23760,mature supervised snapshots
+90d,tweedie_gam,2011-03-01,4512,0.0,23760,mature supervised snapshots
+90d,hurdle_gamma_gam,2011-03-01,4512,0.0,23760,mature supervised snapshots
+90d,hurdle_ngboost_lognormal,2011-03-01,4512,0.0,23760,mature supervised snapshots
+90d,lstm_hurdle_lognormal,2011-03-01,4512,0.0,23760,mature supervised snapshots
+90d,bg_nbd_gamma_gamma,2011-03-01,4512,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_gamma_gamma,2011-03-01,4512,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_seasonal_gamma_gamma,2011-03-01,4512,0.0,0,as-of customer transaction histories
+90d,recent_spend,2011-06-01,4908,0.0,0,baseline formula
+90d,xgboost_tweedie,2011-06-01,4908,0.0,14734,mature supervised snapshots
+90d,xgboost_enriched_monthly,2011-06-01,4908,0.0,36974,mature supervised snapshots
+90d,hurdle_gamma_hist,2011-06-01,4908,0.0,36974,mature supervised snapshots
+90d,tweedie_gam,2011-06-01,4908,0.0,36974,mature supervised snapshots
+90d,hurdle_gamma_gam,2011-06-01,4908,0.0,36974,mature supervised snapshots
+90d,hurdle_ngboost_lognormal,2011-06-01,4908,0.0,36974,mature supervised snapshots
+90d,lstm_hurdle_lognormal,2011-06-01,4908,0.0,36974,mature supervised snapshots
+90d,bg_nbd_gamma_gamma,2011-06-01,4908,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_gamma_gamma,2011-06-01,4908,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_seasonal_gamma_gamma,2011-06-01,4908,0.0,0,as-of customer transaction histories
+90d,recent_spend,2011-09-01,5224,0.0,0,baseline formula
+90d,xgboost_tweedie,2011-09-01,5224,0.0,19642,mature supervised snapshots
+90d,xgboost_enriched_monthly,2011-09-01,5224,0.0,51370,mature supervised snapshots
+90d,hurdle_gamma_hist,2011-09-01,5224,0.0,51370,mature supervised snapshots
+90d,tweedie_gam,2011-09-01,5224,0.0,51370,mature supervised snapshots
+90d,hurdle_gamma_gam,2011-09-01,5224,0.0,51370,mature supervised snapshots
+90d,hurdle_ngboost_lognormal,2011-09-01,5224,0.0,51370,mature supervised snapshots
+90d,lstm_hurdle_lognormal,2011-09-01,5224,0.0,51370,mature supervised snapshots
+90d,bg_nbd_gamma_gamma,2011-09-01,5224,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_gamma_gamma,2011-09-01,5224,0.0,0,as-of customer transaction histories
+90d,pareto_nbd_seasonal_gamma_gamma,2011-09-01,5224,0.0,0,as-of customer transaction histories
+6m,recent_spend,2010-12-01,4239,0.0,0,baseline formula
+6m,xgboost_tweedie,2010-12-01,4239,0.0,2684,mature supervised snapshots
+6m,xgboost_enriched_monthly,2010-12-01,4239,0.0,2684,mature supervised snapshots
+6m,hurdle_gamma_hist,2010-12-01,4239,0.0,2684,mature supervised snapshots
+6m,tweedie_gam,2010-12-01,4239,0.0,2684,mature supervised snapshots
+6m,hurdle_gamma_gam,2010-12-01,4239,0.0,2684,mature supervised snapshots
+6m,hurdle_ngboost_lognormal,2010-12-01,4239,0.0,2684,mature supervised snapshots
+6m,lstm_hurdle_lognormal,2010-12-01,4239,0.0,2684,mature supervised snapshots
+6m,bg_nbd_gamma_gamma,2010-12-01,4239,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_gamma_gamma,2010-12-01,4239,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_seasonal_gamma_gamma,2010-12-01,4239,0.0,0,as-of customer transaction histories
+6m,recent_spend,2011-01-01,4315,0.0,0,baseline formula
+6m,xgboost_tweedie,2011-01-01,4315,0.0,2684,mature supervised snapshots
+6m,xgboost_enriched_monthly,2011-01-01,4315,0.0,5635,mature supervised snapshots
+6m,hurdle_gamma_hist,2011-01-01,4315,0.0,5635,mature supervised snapshots
+6m,tweedie_gam,2011-01-01,4315,0.0,5635,mature supervised snapshots
+6m,hurdle_gamma_gam,2011-01-01,4315,0.0,5635,mature supervised snapshots
+6m,hurdle_ngboost_lognormal,2011-01-01,4315,0.0,5635,mature supervised snapshots
+6m,lstm_hurdle_lognormal,2011-01-01,4315,0.0,5635,mature supervised snapshots
+6m,bg_nbd_gamma_gamma,2011-01-01,4315,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_gamma_gamma,2011-01-01,4315,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_seasonal_gamma_gamma,2011-01-01,4315,0.0,0,as-of customer transaction histories
+6m,recent_spend,2011-02-01,4387,0.0,0,baseline formula
+6m,xgboost_tweedie,2011-02-01,4387,0.0,2684,mature supervised snapshots
+6m,xgboost_enriched_monthly,2011-02-01,4387,0.0,8771,mature supervised snapshots
+6m,hurdle_gamma_hist,2011-02-01,4387,0.0,8771,mature supervised snapshots
+6m,tweedie_gam,2011-02-01,4387,0.0,8771,mature supervised snapshots
+6m,hurdle_gamma_gam,2011-02-01,4387,0.0,8771,mature supervised snapshots
+6m,hurdle_ngboost_lognormal,2011-02-01,4387,0.0,8771,mature supervised snapshots
+6m,lstm_hurdle_lognormal,2011-02-01,4387,0.0,8771,mature supervised snapshots
+6m,bg_nbd_gamma_gamma,2011-02-01,4387,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_gamma_gamma,2011-02-01,4387,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_seasonal_gamma_gamma,2011-02-01,4387,0.0,0,as-of customer transaction histories
+6m,recent_spend,2011-03-01,4512,0.0,0,baseline formula
+6m,xgboost_tweedie,2011-03-01,4512,0.0,5983,mature supervised snapshots
+6m,xgboost_enriched_monthly,2011-03-01,4512,0.0,12070,mature supervised snapshots
+6m,hurdle_gamma_hist,2011-03-01,4512,0.0,12070,mature supervised snapshots
+6m,tweedie_gam,2011-03-01,4512,0.0,12070,mature supervised snapshots
+6m,hurdle_gamma_gam,2011-03-01,4512,0.0,12070,mature supervised snapshots
+6m,hurdle_ngboost_lognormal,2011-03-01,4512,0.0,12070,mature supervised snapshots
+6m,lstm_hurdle_lognormal,2011-03-01,4512,0.0,12070,mature supervised snapshots
+6m,bg_nbd_gamma_gamma,2011-03-01,4512,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_gamma_gamma,2011-03-01,4512,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_seasonal_gamma_gamma,2011-03-01,4512,0.0,0,as-of customer transaction histories
+6m,recent_spend,2011-04-01,4691,0.0,0,baseline formula
+6m,xgboost_tweedie,2011-04-01,4691,0.0,5983,mature supervised snapshots
+6m,xgboost_enriched_monthly,2011-04-01,4691,0.0,15608,mature supervised snapshots
+6m,hurdle_gamma_hist,2011-04-01,4691,0.0,15608,mature supervised snapshots
+6m,tweedie_gam,2011-04-01,4691,0.0,15608,mature supervised snapshots
+6m,hurdle_gamma_gam,2011-04-01,4691,0.0,15608,mature supervised snapshots
+6m,hurdle_ngboost_lognormal,2011-04-01,4691,0.0,15608,mature supervised snapshots
+6m,lstm_hurdle_lognormal,2011-04-01,4691,0.0,15608,mature supervised snapshots
+6m,bg_nbd_gamma_gamma,2011-04-01,4691,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_gamma_gamma,2011-04-01,4691,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_seasonal_gamma_gamma,2011-04-01,4691,0.0,0,as-of customer transaction histories
+6m,recent_spend,2011-05-01,4797,0.0,0,baseline formula
+6m,xgboost_tweedie,2011-05-01,4797,0.0,5983,mature supervised snapshots
+6m,xgboost_enriched_monthly,2011-05-01,4797,0.0,19521,mature supervised snapshots
+6m,hurdle_gamma_hist,2011-05-01,4797,0.0,19521,mature supervised snapshots
+6m,tweedie_gam,2011-05-01,4797,0.0,19521,mature supervised snapshots
+6m,hurdle_gamma_gam,2011-05-01,4797,0.0,19521,mature supervised snapshots
+6m,hurdle_ngboost_lognormal,2011-05-01,4797,0.0,19521,mature supervised snapshots
+6m,lstm_hurdle_lognormal,2011-05-01,4797,0.0,19521,mature supervised snapshots
+6m,bg_nbd_gamma_gamma,2011-05-01,4797,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_gamma_gamma,2011-05-01,4797,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_seasonal_gamma_gamma,2011-05-01,4797,0.0,0,as-of customer transaction histories
+6m,recent_spend,2011-06-01,4908,0.0,0,baseline formula
+6m,xgboost_tweedie,2011-06-01,4908,0.0,10222,mature supervised snapshots
+6m,xgboost_enriched_monthly,2011-06-01,4908,0.0,23760,mature supervised snapshots
+6m,hurdle_gamma_hist,2011-06-01,4908,0.0,23760,mature supervised snapshots
+6m,tweedie_gam,2011-06-01,4908,0.0,23760,mature supervised snapshots
+6m,hurdle_gamma_gam,2011-06-01,4908,0.0,23760,mature supervised snapshots
+6m,hurdle_ngboost_lognormal,2011-06-01,4908,0.0,23760,mature supervised snapshots
+6m,lstm_hurdle_lognormal,2011-06-01,4908,0.0,23760,mature supervised snapshots
+6m,bg_nbd_gamma_gamma,2011-06-01,4908,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_gamma_gamma,2011-06-01,4908,0.0,0,as-of customer transaction histories
+6m,pareto_nbd_seasonal_gamma_gamma,2011-06-01,4908,0.0,0,as-of customer transaction histories
